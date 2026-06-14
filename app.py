@@ -158,7 +158,7 @@ def route_shoot():
         return jsonify({"error": f"Cell ({row}, {col}) has already been shot."}), 400
 
     result = shoot(game, row, col)
-    won = not any(cell in (-1, 1) for row_ in game["visible_grid"] for cell in row_)
+    won = all(len(ship["hits"]) == len(ship["cells"]) for ship in game["ships"])
     return jsonify({"result": result, "board": game["visible_grid"], "won": won})
 
 
