@@ -22,11 +22,9 @@ A stateful HTTP API for playing a single game of Battleship. The server keeps al
 
 ### Installation
 
-Clone the repository and install the dependencies:
+Install the dependencies:
 
 ```bash
-git clone https://github.com/your-username/battleship.git
-cd battleship
 pip install -r requirements.txt
 ```
 
