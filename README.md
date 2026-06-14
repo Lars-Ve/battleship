@@ -133,7 +133,9 @@ Fires a shot at the given coordinates.
 | `2`, `3`, `-3`, `4`, `5` | Hit **and** sunk a ship: the value is the ship's identifier (see [Visible grid cell values](#visible-grid-cell-values)) |
  
 When a ship is sunk, `result` carries the ship's identifier instead of a generic value, and all cells of that ship in `board` are updated to that same identifier.
- 
+
+won: boolean, included in every shoot response. true if all ships have been sunk and the game is over, false otherwise.
+
 ---
  
 ## Error Handling
