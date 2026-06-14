@@ -3,6 +3,7 @@ A stateful HTTP API for playing a single game of Battleship. The server keeps al
 
 ## Table of Contents
  
+- [Getting Started](#getting-started)
 - [Game Rules](#game-rules)
 - [Board Representation](#board-representation)
 - [Endpoints](#endpoints)
@@ -10,6 +11,41 @@ A stateful HTTP API for playing a single game of Battleship. The server keeps al
   - [POST /game/shoot](#post-gameshoot)
 - [Error Handling](#error-handling)
 - [Examples](#examples)
+---
+
+## Getting Started
+
+### Requirements
+
+- Python 3.8+
+- pip or conda
+
+### Installation
+
+Clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/your-username/battleship.git
+cd battleship
+pip install -r requirements.txt
+```
+
+### Running the API server
+
+```bash
+python app.py
+```
+
+The server starts on `http://localhost:5000` by default.
+
+### Running the terminal frontend (optional)
+
+In a second terminal, with the server already running:
+
+```bash
+python frontend.py
+```
+
 ---
  
 ## Game Rules
@@ -261,4 +297,3 @@ Content-Type: application/json
 ```
  
 `result: 2` means the Destroyer (size 2) was sunk. Both its cells are now marked `2` on the board.
- 
